@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Site Navigation</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        header {
+            height: 39px;
+        }
+        header nav ul {
+            list-style: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header a {
+            text-decoration: none;
+            color: grey;
+        }
+        header nav ul li{
+            display: inline-block;
+            position: relative;
+            padding: 10px 15px;
+        }
+        header nav ul li>ul {
+            opacity: 0;
+            visibility: hidden;
+            position: relative;
+            transition: all .5s ease-in-out;
+            position: absolute;
+            top: 39px;
+            left: 0;
+            right: 0;
+        }
+        header nav ul li ul li {
+            display: block;
+        }
+        header nav ul li:hover {
+            background: bisque;
+        }
+        header nav ul li:hover > ul {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/about-us">About us</a></li>
+                <li><a href="/services">Our services</a>
+                    <ul>
+                        <li><a href="/services/strategy">Strategy</a></li>
+                        <li><a href="/services/strategy">Marketing</a></li>
+                        <li><a href="/services/design">Design</a></li>
+                        <li><a href="/services/development">Development</a></li>
+                    </ul>
+                </li>
+                <li><a href="/contact">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
